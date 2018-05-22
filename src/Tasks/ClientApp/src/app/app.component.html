@@ -1,0 +1,9 @@
+<header class="w3-container w3-teal">
+  <h1>Task Manager</h1>
+</header>
+<div class="w3-row">
+  <div class="w3-col m4 l3">
+    <app-task-creator (onCreated)="addTaskToList($event)"></app-task-creator>
+    <app-task-list [tasks]="task$ | async" (onCancelled)="removeTaskFromList($event)"></app-task-list>
+  </div>
+</div>
